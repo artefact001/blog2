@@ -18,8 +18,6 @@ Route::get('articles/{article}/comments', [CommentController::class, 'index'])->
 
 
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\CommentController;
 
 Route::resource('articles', ArticleController::class);
 
