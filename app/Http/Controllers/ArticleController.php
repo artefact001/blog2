@@ -26,8 +26,9 @@ class ArticleController extends Controller
             'creation_date' => 'required|date',
             'image' => 'image|nullable',
         ]);
-
         $imagePath = $request->file('image') ? $request->file('image')->store('images', 'public') : null;
+
+        // $imagePath = $request->file('image') ? $request->file('image')->store('images', 'public') : null;
 
         Article::create([
             'name' => $request->name,
